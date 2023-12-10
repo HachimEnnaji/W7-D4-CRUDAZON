@@ -99,7 +99,7 @@ const postIt = (event) => {
     });
 };
 const deleteProduct = () => {
-  const hasConfirmed = confirm("sei sicuro di voler eliminare l'appuntamento?");
+  const hasConfirmed = confirm("sei sicuro di voler eliminare il prodotto?");
   if (hasConfirmed) {
     const doubleCheck = confirm("Sicuro, sicuro?");
     if (doubleCheck) {
