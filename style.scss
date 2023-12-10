@@ -1,0 +1,39 @@
+$heading-color: "Open Sans", sans-serif;
+$text-color: "Raleway", sans-serif;
+
+h1 {
+  font-family: $heading-color;
+}
+table {
+  tbody {
+    tr:nth-child(even) {
+      background-color: #eee;
+    }
+    td:last-child {
+      a {
+        background-color: white;
+      }
+      a:first-child:hover {
+        background-color: lightgray;
+        scale: 1.09;
+        transition: background-color 700ms, scale 80ms;
+      }
+      a:last-child:hover {
+        background-color: lightblue;
+        scale: 1.09;
+        transition: background-color 700ms, scale 80ms;
+      }
+    }
+    img {
+      height: 80px;
+      cursor: pointer;
+      &:hover {
+        scale: 1.3;
+        transition: 400ms;
+      }
+    }
+  }
+}
+div.card {
+  max-width: 400px;
+}
