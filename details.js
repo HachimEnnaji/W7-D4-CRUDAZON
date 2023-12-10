@@ -28,7 +28,7 @@ object-fit: contain;" alt="product Image">
 <div class="card-body">
 <h5 class="card-title"><span class="display-6">${object.name}</span> </h5>
 <p class="card-text"><strong> ${object.brand}</strong><br>
-    Descrizione:${object.description}<br>
+    Descrizione: ${object.description}<br>
 Prezzo: <span class="lead"> ${object.price} € </span> <br>
 ID: ${object._id}<br>
 Creazione: ${object.createdAt}<br></p>
