@@ -129,7 +129,7 @@ const deleteProduct = () => {
 const details = (show) => {
   const popover = document.getElementById("advice");
   if (show) {
-    popover.innerText = "Don't worry if you don't have we'll provide one";
+    popover.innerText = "Don't worry if you haven't got we'll provide one";
   } else {
     setTimeout(() => (popover.innerText = ""), 2000);
   }
