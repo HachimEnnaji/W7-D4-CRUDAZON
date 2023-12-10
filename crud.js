@@ -31,7 +31,7 @@ fetch(URL, requestHeader)
     });
   })
   .catch((Error) => {
-    console.log("error");
+    console.log("error" + Error);
   })
   .finally(() => {
     div.classList.add("d-none");
@@ -52,22 +52,21 @@ const search = (event) => {
       return response.json();
     })
     .then((product) => {
-      product
-        .forEach((smartphone) => {
-          if (smartphone.name.includes(key) || smartphone.brand.includes(key)) {
-            //   console.log(smartphone);
-            const telephone = document.createElement("tr");
-            telephone.innerHTML = `
+      product.forEach((smartphone) => {
+        if (smartphone.name.includes(key) || smartphone.brand.includes(key)) {
+          //   console.log(smartphone);
+          const telephone = document.createElement("tr");
+          telephone.innerHTML = `
                                 <td ><img src="${smartphone.imageUrl}" class="px-0 ms-auto"   alt="smartphone image"></td>
                                 <td ><strong>${smartphone.name}</strong></td>
                                 <td><a href="./details.html?product=${smartphone._id}" class="btn btn-secondary text-dark">Scopri di più</a><a href="./back-office.html?product=${smartphone._id}" class="btn btn-secondary text-dark mx-2"><i class="bi bi-pencil"></i></a></td>
                             `;
-            table.appendChild(telephone);
-            div.classList.add("d-none");
-          }
-        })
-        .catch((Error) => {
-          console.log("error");
-        });
+          table.appendChild(telephone);
+          div.classList.add("d-none");
+        }
+      });
+    })
+    .catch((Error) => {
+      console.log("errore" + Error);
     });
 };
